@@ -2,7 +2,16 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const pricingRoutes = require('./routes/pricingRoutes.js');
-// const cors = require('cors');
+const cors = require('cors');
+
+app.use(express.json());
+
+
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST'], // Allow specific HTTP methods
+//   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+}));
 
 // Root route
 app.get('/', (req, res) => {
