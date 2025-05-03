@@ -405,7 +405,7 @@ def capture_baseline():
             "gpu": samples[0]["gpu"],  # GPU metrics don't average well
             "disk_io": samples[-1]["disk_io"],  # Use last sample for counters
             "network_io": samples[-1]["network_io"],  # Use last sample for counters
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now().isoformat() + "Z",
             "system": samples[0]["system"]
         }
         

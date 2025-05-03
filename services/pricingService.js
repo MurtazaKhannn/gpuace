@@ -7,3 +7,4 @@ exports.fetchPricing = async () => {
 //   console.log(response);
   return response.data;
 };
+
