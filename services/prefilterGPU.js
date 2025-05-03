@@ -3,7 +3,7 @@ function prefilteredGPUs(gpuList, conditions) {
         return Object.keys(conditions).every(key => {
             // Check if the condition exists in the user input
             if (conditions[key]) {
-                if (key === 'country' || key === 'region' || key === 'operating_system' || key === 'model_type') {
+                if (key === 'country' || key === 'region' || key === 'operating_system') {
                     // Ensure the key exists in the GPU object before comparing
                     if (gpu[key]) {
                         return gpu[key].toLowerCase() === conditions[key].toLowerCase();
